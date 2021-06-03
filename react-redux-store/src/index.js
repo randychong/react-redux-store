@@ -8,6 +8,7 @@ import rootReducer from "./reducers/rootReducer";
 import logger from "redux-logger";
 
 const store = createStore(rootReducer, applyMiddleware(logger));
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
