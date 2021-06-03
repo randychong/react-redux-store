@@ -1,11 +1,11 @@
-import { DISPLAY_PRODUCTS } from "../action-types/product-types"
+import { GET_PRODUCTS } from "../action-types/product-types"
 
-const initialState = "product name"
+const initialState = []
 
 const Products = (state = initialState, action) => {
     switch(action.type) {
-        case DISPLAY_PRODUCTS:
-            return state;
+        case GET_PRODUCTS:
+            return (state = action.payload)
         default:
             return state;
     }

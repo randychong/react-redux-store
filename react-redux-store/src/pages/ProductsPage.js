@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import Products from "../components/Products"
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux"
+import { getProducts } from "../actions/product-actions"
+import ProductCard from "../components/ProductCard"
 import ShoppingCart from "../components/ShoppingCart"
 
 export default function ProductsPage() {
+    const dispatch = useDispatch()
+    const products = useSelector(state => state.Products)
     useEffect(() => {
-        getProducts()
+        getProducts(dispatch)
     }, [])
 
-    const getProducts = async () => {
-        const response = await fetch("https://fakestoreapi.com/products")
-        const json = await response.json()
-        console.log(json)
-    }
     return (
-        <div>
-            <h1>Products Page</h1>
-            <Products />
+        <div className="product-card">
+            <h1>Products</h1>
+            <div>{products.map((product) => (
+                <ProductCard product={product} />
+            ))}</div>
             <ShoppingCart />
         </div>
     )

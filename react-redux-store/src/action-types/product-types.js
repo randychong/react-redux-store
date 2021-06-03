@@ -1,1 +1,1 @@
-export const DISPLAY_PRODUCTS = "DISPLAY_PRODUCTS"
+export const GET_PRODUCTS = "GET_PRODUCTS"
