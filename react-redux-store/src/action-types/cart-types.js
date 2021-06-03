@@ -1,1 +1,1 @@
-export const DISPLAY_CART = "DISPLAY_CART"
+export const ADD_TO_CART = "ADD_TO_CART"

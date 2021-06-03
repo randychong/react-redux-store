@@ -1,12 +1,17 @@
 import React from 'react'
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
+import CartItem from "../components/CartItem"
 
 export default function ShoppingCart() {
     const cart = useSelector((state) => state.Cart)
     return (
         <div>
             <h1>Shopping Cart</h1>
-            <p>{cart}</p>
+            <div className="shopping-cart">
+                {cart.map((product) => (
+                    <CartItem product={product} />
+                ))}
+            </div>
         </div>
     )
 }

@@ -7,17 +7,18 @@ import ShoppingCart from "../components/ShoppingCart"
 export default function ProductsPage() {
     const dispatch = useDispatch()
     const products = useSelector(state => state.Products)
+    
     useEffect(() => {
         getProducts(dispatch)
     }, [])
 
     return (
-        <div className="product-card">
+        <div>
+            <ShoppingCart />
             <h1>Products</h1>
             <div>{products.map((product) => (
                 <ProductCard product={product} />
             ))}</div>
-            <ShoppingCart />
         </div>
     )
 }

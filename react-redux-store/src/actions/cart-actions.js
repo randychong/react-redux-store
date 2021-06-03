@@ -1,7 +1,8 @@
-import { DISPLAY_CART } from "../action-types/cart-types"
+import { ADD_TO_CART } from "../action-types/cart-types"
 
-export const displayCart = (dispatch) => {
-    return dispatch({
-        type: DISPLAY_CART
+export const addToCart = async (dispatch, product) => {
+    return dispatch ({
+        type: ADD_TO_CART,
+        payload: product,
     })
 }

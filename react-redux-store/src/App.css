@@ -1,8 +1,25 @@
 .App {
   text-align: center;
 }
+.product-card {
+  margin: 1rem;
+  padding: 1rem;
+  border-bottom: 1px black solid;
+}
 
 .product-image {
   height: 200px;
   width: 200px;
+}
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+}
+
+.cart-image {
+  height: 50px;
+  width: 50px;
+  padding: 1rem;
 }
