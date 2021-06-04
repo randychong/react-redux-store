@@ -4,16 +4,25 @@ import Home from "./pages/Home"
 import ProductsPage from "./pages/ProductsPage"
 import SingleProduct from "./components/SingleProduct"
 import ShoppingCart from "./components/ShoppingCart"
+import HomeIcon from "./images/home.png"
+import FavoritesIcon from "./images/favorites.png"
+import CartIcon from "./images/cart-icon.png"
 
 function App() {
   return (
     <div className="App">
-      <h1>React Redux Store</h1>
+      <h1 className="app-header">Shoplift</h1>
       <Router>
         <nav className="navbar">
-            <p className="nav-link"><Link to="/">Home</Link></p>
-            <p className="nav-link"><Link to="/products">Products</Link></p>
-            <p className="nav-link"><Link to="/shoppingcart">Shopping Cart</Link></p>
+            <p><Link className="navlink" to="/">
+              <img src={HomeIcon} className="navicon"></img> 
+            </Link></p>
+            <p><Link className="navlink" to="/products">
+              <img src={FavoritesIcon} className="navicon"></img> 
+            </Link></p>
+            <p><Link className="navlink" to="/shoppingcart">
+              <img src={CartIcon} className="navicon"></img> 
+            </Link></p>
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />

@@ -13,6 +13,7 @@ export default function CartItem(props) {
                 alt={props.product.title}
                 ></img>
             <p>{props.product.title}</p>
+            <p>${props.product.price}</p>
             <Link to="/products/:id">
                 <button
                     className="details-button"

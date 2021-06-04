@@ -3,7 +3,11 @@ import React from 'react'
 export default function About() {
     return (
         <div>
-            <h1>About</h1>
+            <p>Deals so great, it's almost like shoplifting!</p>
+            <img
+                className="home-image"
+                src="https://bit.ly/34JEojk"></img>
+            <p>©Copyright 2021</p>
         </div>
     )
 }

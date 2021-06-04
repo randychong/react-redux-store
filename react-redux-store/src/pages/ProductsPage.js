@@ -13,9 +13,8 @@ export default function ProductsPage() {
 
     return (
         <div>
-            {/* <ShoppingCart /> */}
-            <h1>Products</h1>
-            <div>{products.map((product) => (
+            <h1 className="products-header">Products</h1>
+            <div className="products-container">{products.map((product) => (
                 <ProductCard product={product} key={product.id}/>
             ))}</div>
         </div>
