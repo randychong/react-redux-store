@@ -2,8 +2,6 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { getProducts } from "../actions/product-actions"
 import ProductCard from "../components/ProductCard"
-import ShoppingCart from "../components/ShoppingCart"
-import SingleProduct from "../components/SingleProduct"
 
 export default function ProductsPage() {
     const dispatch = useDispatch()
@@ -15,11 +13,10 @@ export default function ProductsPage() {
 
     return (
         <div>
-            <SingleProduct />
-            <ShoppingCart />
+            {/* <ShoppingCart /> */}
             <h1>Products</h1>
             <div>{products.map((product) => (
-                <ProductCard product={product} />
+                <ProductCard product={product} key={product.id}/>
             ))}</div>
         </div>
     )

@@ -9,7 +9,7 @@ export default function ShoppingCart() {
             <h1>Shopping Cart</h1>
             <div className="shopping-cart">
                 {cart.map((product) => (
-                    <CartItem product={product} />
+                    <CartItem product={product} key={product.id}/>
                 ))}
             </div>
         </div>

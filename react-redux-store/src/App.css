@@ -14,12 +14,21 @@
 
 .shopping-cart {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 2rem;
+  place-items: center;
+}
+
+.cart-item-card {
+  border-bottom: 1px black solid;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .cart-image {
-  height: 50px;
-  width: 50px;
-  padding: 1rem;
+  height: 200px;
+  width: 200px;
+}
+
+.single-product-image {
+  height: 200px;
+  width: 200px;
 }
