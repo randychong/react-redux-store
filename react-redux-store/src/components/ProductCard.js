@@ -16,6 +16,7 @@ export default function Products(props) {
             <p>{props.product.title}</p>
             <Link to="/products/:id">
                 <button
+                    className="details-button"
                     onClick={() => {
                         selectProduct(dispatch, props.product)
                     }}

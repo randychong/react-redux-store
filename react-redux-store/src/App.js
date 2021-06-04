@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <h1>React Redux Store</h1>
       <Router>
-        <nav>
+        <nav className="navbar">
             <p className="nav-link"><Link to="/">Home</Link></p>
             <p className="nav-link"><Link to="/products">Products</Link></p>
             <p className="nav-link"><Link to="/shoppingcart">Shopping Cart</Link></p>

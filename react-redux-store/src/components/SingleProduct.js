@@ -16,6 +16,7 @@ export default function SingleProduct() {
             <p>${selectedProduct.price}</p>
             <p>{selectedProduct.description}</p>
             <button
+                className="add-button"
                 onClick={() =>
                     addToCart(dispatch, selectedProduct)
                 }
