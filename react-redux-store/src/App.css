@@ -144,3 +144,22 @@ html {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media (min-width: 1300px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-card,
+  .cart-item-card {
+    width: 300px;
+  }
+  .shopping-cart {
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
