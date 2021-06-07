@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from "../action-types/cart-types"
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../action-types/cart-types"
 
 export const addToCart = (dispatch, product) => {
     return dispatch ({
@@ -7,3 +7,9 @@ export const addToCart = (dispatch, product) => {
     })
 }
 
+export const removeFromCart = (dispatch, productID) => {
+    return dispatch ({
+        type: REMOVE_FROM_CART,
+        payload: productID,
+    })
+}

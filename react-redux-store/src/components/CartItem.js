@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from "react-redux"
 import { selectProduct } from "../actions/single-product-actions"
 import { Link } from "react-router-dom"
+import { removeFromCart } from "../actions/cart-actions"
 
 export default function CartItem(props) {
     const dispatch = useDispatch()
@@ -14,14 +15,12 @@ export default function CartItem(props) {
                 ></img>
             <p>{props.product.title}</p>
             <p>${props.product.price}</p>
-            <Link to="/products/:id">
-                <button
-                    className="details-button"
-                    onClick={() => {
-                        selectProduct(dispatch, props.product)
-                    }}
-                >Product Details</button>
-            </Link>
+            <button
+                className="remove-button"
+                onClick={() => 
+                    removeFromCart(dispatch, props.product.id)
+                }
+            >Remove Item from Cart</button>
         </div>
     )
 }

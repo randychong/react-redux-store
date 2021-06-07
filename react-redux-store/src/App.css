@@ -86,7 +86,8 @@ html {
 }
 
 .details-button,
-.add-button {
+.add-button,
+.remove-button {
   height: 3rem;
   width: 18rem;
   border-radius: 5px;
